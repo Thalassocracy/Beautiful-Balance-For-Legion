@@ -1,0 +1,21 @@
+{
+  "author": "Legion Team, KillerKiwiJuice, Dissonant",
+  "build": "113953",
+  "category": [
+    "titans",
+    "units",
+    "faction"
+  ],
+  "context": "client",
+  "date": "2020/01/04",
+  "description": "Replaces Legion textures with an older version. Textures made and recovered by KillerKiwiJuice. Files arranged by Dissonant.",
+  "display_name": "Beautiful Textures for Legion",
+  "forum": "",
+  "icon": "https://i.imgur.com/WBC5lbI.png",
+  "identifier": "com.pa.beautiful-legion",
+  "priority": 101,
+  "signature": "(not yet implemented)",
+  "version": "0.9.0",
+  "titansOnly": true,
+  "hidden": true
+}
