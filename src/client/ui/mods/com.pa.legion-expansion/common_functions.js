@@ -1,21 +1,30 @@
 define({
   bodyPanelClass: function (faction) {
-    if (faction === "legion") {
-      $(".body_panel").addClass("legionui");
-    } else if (faction === "mixed") {
-      $(".body_panel").addClass("mixedui");
+    switch (faction) {
+      case "legion":
+        $(".body_panel").addClass("legionui");
+        break;
+      case "mixed":
+        $(".body_panel").addClass("mixedui");
     }
   },
   imageSourceForType: function (path, colour, type) {
     return path + colour + "/icon_category_" + type.toLowerCase() + ".png";
   },
-  toggleImage: function (src, path, colour, png1, png2) {
+  setupSourcePath: function (src, png) {
+    var prefixedSource = "img[src='" + src;
+    return prefixedSource + png + "']";
+  },
+  setSourceAttribute: function (src, path, colour, png) {
     var imgPath = path + colour + "/";
-    var src1 = src + png1 + "']";
-    $(src1).attr("src", imgPath + png1);
+    $(src).attr("src", imgPath + png);
+  },
+  toggleImage: function (src, path, colour, png1, png2) {
+    var src1 = this.setupSourcePath(src, png1);
+    this.setSourceAttribute(src1, path, colour, png1);
     if (png2) {
-      var src2 = src + png2 + "']";
-      $(src2).attr("src", imgPath + png2);
+      var src2 = this.setupSourcePath(src, png2);
+      this.setSourceAttribute(src2, path, colour, png2);
     }
   },
   togglePanel: function (panel, path, colour, png1, png2) {
@@ -23,11 +32,13 @@ define({
     return panel ? folderPath + png1 : folderPath + png2;
   },
   uiColour: function (faction) {
-    if (faction === "legion") {
-      return "red";
-    } else if (faction === "mixed") {
-      return "purple";
+    switch (faction) {
+      case "legion":
+        return "red";
+      case "mixed":
+        return "purple";
+      default:
+        return "";
     }
-    return "";
   },
 });

@@ -80,8 +80,8 @@
   ],
   "guard_layer": "WL_AnySurface",
   "has_death_effects": true,
-  "max_health": 80000,
-  "mesh_bounds": [25, 25, 60],
+  "max_health": 60000,
+  "mesh_bounds": [34, 30, 60],
   "model": {
     "animations": {
       "walk": "/pa/units/land/l_titan_bot/l_titan_bot_walk.papa"
@@ -91,8 +91,8 @@
     "walk_speed": 15
   },
   "navigation": {
-    "acceleration": 10,
-    "brake": 10,
+    "acceleration": 100,
+    "brake": -1,
     "maintain_priority_target": true,
     "move_speed": 11,
     "park_stamp": {
@@ -198,20 +198,6 @@
       "projectiles_per_fire": 16,
       "record_index": 2,
       "spec_id": "/pa/units/land/l_titan_bot/l_titan_bot_rocket_tool_weapon.json"
-    },
-    {
-      "aim_bone": "bone_rightFoot",
-      "fire_event": "fired3",
-      "muzzle_bone": "bone_rightFoot",
-      "record_index": -1,
-      "spec_id": "/pa/units/land/l_titan_bot/l_titan_bot_stomp_tool_weapon.json"
-    },
-    {
-      "aim_bone": "bone_leftFoot",
-      "fire_event": "fired3",
-      "muzzle_bone": "bone_leftFoot",
-      "record_index": -1,
-      "spec_id": "/pa/units/land/l_titan_bot/l_titan_bot_stomp_tool_weapon.json"
     }
   ],
   "unit_types": [

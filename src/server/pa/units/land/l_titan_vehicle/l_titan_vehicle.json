@@ -171,8 +171,8 @@
     "filename": "/pa/units/land/l_titan_vehicle/l_titan_vehicle.papa"
   },
   "navigation": {
-    "acceleration": 5,
-    "brake": 5,
+    "acceleration": 100,
+    "brake": 100,
     "move_speed": 10,
     "park_stamp": {
       "cost": 10,
@@ -261,14 +261,6 @@
       "projectiles_per_fire": 1,
       "record_index": 2,
       "spec_id": "/pa/units/land/l_titan_vehicle/l_titan_vehicle_tool_weapon_side.json"
-    },
-    {
-      "aim_bone": "bone_root",
-      "fire_event": "fired",
-      "muzzle_bone": "bone_root",
-      "projectiles_per_fire": 1,
-      "record_index": -1,
-      "spec_id": "/pa/units/land/l_titan_vehicle/l_titan_vehicle_tool_weapon_stomp.json"
     }
   ],
   "unit_types": [

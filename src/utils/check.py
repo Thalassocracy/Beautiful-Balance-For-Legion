@@ -36,6 +36,16 @@ def check_mod(client_output_dir, server_output_dir):
         sys.exit(1)
 
     checker.find_missing_files(report, fs)
+    # For compatibility with other mods, we may need to refer to their files
+    # without actually requiring that they are present.
+    ALLOW_MISSING_FILES = [
+        # Bugs Faction
+        "/pa/units/structure/bug_basic_extractor/bug_basic_extractor.json",
+        "/pa/units/structure/bug_advanced_extractor/bug_advanced_extractor.json",
+    ]
+    for allowed_missing in ALLOW_MISSING_FILES:
+        report.file_issues.pop(allowed_missing, None)
+
     if report.getIssueCount() > 0:
         print(report.printDetailsReport())
         print(report.printJsonIssueReport())
@@ -54,7 +64,7 @@ def check_mod(client_output_dir, server_output_dir):
 
         # Check that all legion factories have Custom1 as a buildable type
         if "Custom1" not in unit["buildable_types"]:
-            print(f"Error: A factory is missing the Custom1 buildable type.")
+            print("Error: A factory is missing the Custom1 buildable type.")
             print(f"  unit: {unit_path}")
             print(f" buildable_types: {unit['buildable_types']}")
             input()

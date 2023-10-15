@@ -39,6 +39,10 @@
       "build_conditions": [
         [
           {
+            "test_type": "EnemyAirPresenceOnPlanet",
+            "boolean": true
+          },
+          {
             "test_type": "CanAffordBuildDemand"
           }
         ]
@@ -90,8 +94,8 @@
       ]
     },
     {
-      "name": "Legion - Advanced AA Bot",
-      "to_build": "LegionBotAdvancedAA",
+      "name": "Legion - Advanced Assault Bot",
+      "to_build": "LegionBotAdvancedAssault",
       "instance_count": -1,
       "priority": 100,
       "max_num_assisters": 10,
@@ -105,17 +109,35 @@
       ]
     },
     {
-      "name": "Legion - Advanced Laser Tank",
-      "to_build": "LegionVehicleAdvancedLaser",
+      "name": "Legion - Advanced AA Bot",
+      "to_build": "LegionBotAdvancedAA",
       "instance_count": -1,
       "priority": 100,
-      "max_num_assisters": 15,
+      "max_num_assisters": 10,
       "builders": ["LegionOrbitalAdvancedCannon"],
       "build_conditions": [
         [
           {
-            "test_type": "CanDeployLandFromBase",
+            "test_type": "EnemyAirPresenceOnPlanet",
             "boolean": true
+          },
+          {
+            "test_type": "CanAffordBuildDemand"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Legion - Advanced Laser Tank",
+      "to_build": "LegionVehicleAdvancedLaser",
+      "instance_count": -1,
+      "priority": 100,
+      "max_num_assisters": 10,
+      "builders": ["LegionOrbitalAdvancedCannon"],
+      "build_conditions": [
+        [
+          {
+            "test_type": "CanAffordBuildDemand"
           }
         ]
       ]

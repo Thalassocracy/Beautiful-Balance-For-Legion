@@ -4,6 +4,251 @@
 
 ### General
 
+- Transports always move to units, units never move to Transports
+
+### Balance
+
+- Orbital
+  - Chariot
+    - Brake increased from 25 to 30
+    - Speed increased from 25 to 50
+
+### Bugfix
+
+- Naval Factory can no longer be blocked in a way that prevents production
+
+## v1.26.0 - 2022-09-19
+
+### General
+
+- Aligned Legion orbital travel speeds with those of MLA
+
+### Balance
+
+- Air
+  - Salamander
+    - Removed secondary fire
+    - Purifier no longer self-destructs
+- Land
+  - Havoc
+    - Cost increased from 750 to 800
+  - Lancer
+    - Health decreased from 120 to 100
+  - Peacekeeper
+    - Health increased from 165 to 170
+  - Scorpion
+    - Range reduced from 130 to 120
+    - Cost increased from 800 to 900
+- Orbital
+  - Starcannon
+    - Health decreased from 3000 to 2000
+    - Unit slots reduced from 14 to 9
+    - Added Enforcer as a buildable unit
+  - Viper
+    - Removed the 100 range weapon
+    - Attacks at full range
+
+### AI
+
+- Enabled usage of Star Cannon following crash fix in base game
+
+### Fixed
+
+- Unit types for Purifier
+
+## v1.25.0 - 2022-07-17
+
+### General
+
+- Added support for the Bugs' Faction metal extractors
+
+### Balance
+
+- Land
+  - Odin
+    - Removed stomp weapon
+  - Omni Silo
+    - Energy storage increased from 75,000 to 225,000
+  - Thor
+    - Removed stomp weapon
+- Orbital
+  - Rig
+    - Cost increased from 3000 to 4000
+
+### Fixed
+
+- Manta not showing DPS for any weapon on its unit card
+- Manta's anti-drop-pod weapon being linked to its missile targeting system
+- Manta AA effects not being tied to where it was shooting
+- Interplanetary speeds and unittype tags for Infiltrator - with thanks to Dreadnought for the report
+- Havoc missing UNITTYPE_TacticalDefense
+
+## v.1.24.0 - 2022-05-11
+
+### General
+
+- Updated selection circle diameter for (with thanks to Anonemous2):
+  - Archer
+  - Decimator
+  - Gustav
+  - Hive
+  - Holocene
+  - Kosmos
+  - Lockheed
+  - Loki
+  - Miniman
+  - Monstrosity
+  - Nova
+  - OmniSilo
+  - Orbweaver
+  - Overseer
+  - Paladin
+  - Panzer
+  - Ripple
+  - Salamander Turret
+  - Sky Bridge
+  - Starcannon
+- Updated mesh bounds for (with thanks to Anonemous2):
+  - Advanced Armour Fabricator
+  - Arsonist
+  - Gustav
+  - Holocene
+  - Jackal
+  - Kosmos
+  - Lancer
+  - Loki
+  - Meteor
+  - Miniman
+  - Orbweaver
+  - Panzer
+  - Rampart
+  - Ripple
+  - Salamander
+  - Scarab
+  - Shredder
+  - Theodor
+  - Thor
+- Visual improvements for Rampart
+- Rampart size increased
+- Rampart strategic icon updated
+
+### Balance
+
+- Air
+  - Meteor
+    - Won't launch Meteorites until ammo is fully reloaded
+  - Scythe
+    - Damage reduced from 35 to 29
+
+### AI
+
+- Fixed Meteors not moving with air platoons
+
+## v1.23.0 - 2022-04-16
+
+### General
+
+- Improved Tyr effects
+- Bots brake instantly
+- Tank braking aligned to acceleration
+- Further improved PNG compression to reduce mod size
+
+### Balance
+
+- Air
+  - Firebird
+    - Health reduced from 300 to 240
+  - Lockheed
+    - Health reduced from 400 to 350
+  - Loki
+    - Health increased from 9000 to 11250
+  - Scythe
+    - Health reduced from 150 to 120
+- Land
+  - Advanced Mass Extractor
+    - Build cost decreased from 2000 to 1800
+    - Metal production increased from 16 to 18
+    - Health reduced from 5000 to 3000
+  - Deathmark
+    - Health increased from 125 to 250
+    - Turn speed increased from 60 to 90
+    - Turret yaw rate increased from 30 to 60
+  - Havoc
+    - Projectiles per shot reduced from 2 to 1
+    - Chain jump vision increased from 10 to 50
+    - Chain jump range increased from 25 to 50
+    - Chained damage reduced from 1500 -> 750 -> 1500 to 750 -> 750 -> 750
+  - Hive
+    - Nanoswarm damage type changed to metal
+    - Nanoswarm damage reduced from 30 to 5
+  - Investigator
+    - Radar range decreased from 350 to 300
+  - Jackal
+    - Cost decreased from 350 to 325
+  - Lancer
+    - Range decreased from 75 to 70
+  - Maul
+    - Speed increased from 8 to 10
+  - Miniman
+    - Speed increased from 8 to 10
+  - Monstrosity
+    - Turret yaw rate increased from 30 to 45
+  - Odin
+    - Acceleration increased from 5 to 100
+    - Braking increased from 5 to 100
+  - Panzer
+    - Speed increased from 10 to 14
+  - Peacekeeper
+    - Cost increased from 60 to 75
+    - Health increased from 150 to 165
+    - Range decreased from 75 to 70
+  - Purger
+    - Health reduced from 40 to 20
+  - Praetorian
+    - Range increased from 100 to 110
+    - Build range increased from 20 to 30
+  - Rampart
+    - Energy consumption increased from 0 to 1200
+  - Scarab
+    - Cost increased from 500 to 550
+  - Scorpion
+    - Range reduced from 150 to 140
+  - Thor
+    - Health reduced from 80,000 to 60,000
+    - Acceleration increased from 10 to 100
+- Orbital
+  - Rig
+    - Storage removed
+    - Energy production reduced from 7000 to 3750
+  - Starcannon
+    - Range reduced from 800 to 600
+- Sea
+  - Hammerhead
+    - Acceleration increased from 4 to 30
+    - Brake increased from 25 to 80
+
+### AI
+
+- Builds the Hive
+
+### Fixed
+
+- Rampart blocking three times as many shots as intended due to change in engine's handling of ammo
+- Removed Rampart's energy efficiency requirement as it only led to the appearance of a non-operational unit
+- Factories not blocking projectiles properly (with thanks to Taiga for the report):
+  - Armour Foundry
+  - Flyer Foundry
+  - Walker Foundry
+  - Ship Foundry
+  - Advanced Armour Foundry
+  - Advanced Flyer Foundry
+  - Advanced Walker Foundry
+  - Advanced Ship Foundry
+
+## v1.22.0 - 2022-02-16
+
+### General
+
 - Improved PNG compression to reduce mod size
 
 ### Balance
@@ -15,11 +260,9 @@
     - Damage to air increased from 50% to 100%
   - Meteoroid
     - Damage to structures decreased from 150% to 100%
+    - Increased guard radius from 100 to 250
+    - Give higher priority to air defences
 - Land
-  - Advanced Mass Extractor
-    - Build cost decreased from 2000 to 1800
-    - Metal production increased from 16 to 18
-    - Health reduced from 5000 to 3000
   - Armour Foundry
     - Build cost decreased from 660 to 600
     - Energy demand increased from 640 to 765
@@ -28,12 +271,11 @@
     - Increased standard deviation of shots from 0 to 1
   - Havoc
     - Damage to commanders increased from 67% to 100%
-    - Range reduced from 115 to 110
   - Lancer
     - Damage to commanders decreased from 133% to 100%
     - Damage to structures decreased from 133% to 100%
     - Damage to vehicles decreased from 133% to 100%
-    - Damage increased from 125 to 167
+    - Damage increased from 125 to 166
   - Panzer
     - Damage to structures decreased from 300% to 100%
   - Peacekeeper
@@ -43,6 +285,8 @@
     - Energy demand increased from 640 to 765
     - Metal demand increased from 15 to 17
 - Orbital
+  - Imperator
+    - Meteoroids can now be controlled
   - Starcannon
     - Energy demand increased from 1900 to 2250
 - Sea
@@ -82,6 +326,10 @@
 - One of the Imperator's side-guns not firing
 - Imperator moves into range of all its guns when attacking orbital targets
 - Viper not firing when chasing a target
+- Particle shape for nuke explosions
+- Supernova causing an error to be logged when built
+- UI style errors
+- Black Knight idle animation not playing
 
 ### Strategic Icons
 

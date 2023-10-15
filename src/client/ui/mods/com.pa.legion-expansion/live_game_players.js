@@ -34,17 +34,11 @@ if (!legionLiveGamePlayersLoaded) {
       });
 
       model.isLegion = ko.computed(function () {
-        if (isLegionOrMixedOrVanilla() === "legion") {
-          return true;
-        }
-        return false;
+        return isLegionOrMixedOrVanilla() === "legion";
       });
 
       model.isMixed = ko.computed(function () {
-        if (isLegionOrMixedOrVanilla() === "mixed") {
-          return true;
-        }
-        return false;
+        return isLegionOrMixedOrVanilla() === "mixed";
       });
 
       var legionStart = ko.observable(false);
@@ -72,7 +66,7 @@ if (!legionLiveGamePlayersLoaded) {
             require([
               "coui://ui/mods/com.pa.legion-expansion/common_functions.js",
             ], function (common) {
-              var src = "img[src='coui://ui/main/shared/img/controls/";
+              var src = "coui://ui/main/shared/img/controls/";
               var path = "coui://ui/mods/com.pa.legion-expansion/img/controls/";
               var colour = common.uiColour(ui);
               var png1 = "pin_open.png";
@@ -132,17 +126,11 @@ if (!legionLiveGamePlayersLoaded) {
       };
 
       model.commanderImageMaskLeg = function (data) {
-        if (checkCommanders(data.commanders) === "legion") {
-          return true;
-        }
-        return false;
+        return checkCommanders(data.commanders) === "legion";
       };
 
       model.commanderImageMaskMix = function (data) {
-        if (checkCommanders(data.commanders) === "mixed") {
-          return true;
-        }
-        return false;
+        return checkCommanders(data.commanders) === "mixed";
       };
 
       $(

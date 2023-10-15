@@ -46,7 +46,7 @@
   },
   "navigation": {
     "acceleration": 80,
-    "brake": 80,
+    "brake": -1,
     "move_speed": 12,
     "turn_speed": 240
   },
@@ -92,6 +92,7 @@
     "UNITTYPE_Land",
     "UNITTYPE_Advanced",
     "UNITTYPE_FactoryBuild",
+    "UNITTYPE_CannonBuildable",
     "UNITTYPE_Custom1"
   ]
 }
